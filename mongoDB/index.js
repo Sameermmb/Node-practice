@@ -22,7 +22,7 @@ app.post("/student-data", async (req, res)=>
     if(checkName) {
         return res.send({sName, msg: "Already Exist"});
     }
-
+    
     let insertRes = await studentCollection.insertOne(obj);
     res.send(insertRes)
 
